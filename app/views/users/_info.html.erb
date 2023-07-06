@@ -26,4 +26,10 @@
       <i class="fas fa-user-cog"></i>
     <% end %>
   <% end %>
+ <ul></ul>
+  <% if current_user != user && current_user.following?(user) && user.following?(current_user) %>
+      <%= link_to message_path(user.id),class: 'btn btn-success' do %>
+        <i class="far fa-comments"></i>
+      <% end %>
+  <% end %>
 </div>
