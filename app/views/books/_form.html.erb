@@ -4,6 +4,10 @@
     <%= f.label :title %>
     <%= f.text_field :title, class: 'form-control book_title' %>
   </div>
+  <div class="form-group">
+    <%= f.label :opinion %>
+    <%= f.text_area :body, class: 'form-control book_body' %>
+  </div>
   
   <% if @book.id.nil? %>
     <div class="form-group" id="star">
@@ -31,11 +35,6 @@
       <%= render "books/static.rate", book: @book %>
     </div>
   <% end %>
-  
-  <div class="form-group">
-    <%= f.label :opinion %>
-    <%= f.text_area :body, class: 'form-control book_body' %>
-  </div>
   <div class="form-group">
     <%= f.submit class: 'btn btn-success' %>
   </div>
