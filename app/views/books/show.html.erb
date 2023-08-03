@@ -24,7 +24,7 @@
             <%= render "book_comments/counter", book: @book %>
           </td>
           <td>閲覧数：<%= @book.read_counts.count %></td>
-          <td><%= render "static.rate", book: @book %></td>
+          <td><%= render "books/static.rate", book: @book %></td>
           <td>
             <% if @book.user == current_user %>
              <%= link_to 'Edit', edit_book_path, class: "btn btn-sm btn-success" %>
